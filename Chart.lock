@@ -1,0 +1,9 @@
+dependencies:
+- name: wildfly
+  repository: https://docs.wildfly.org/wildfly-charts/
+  version: 2.0.3
+- name: infinispan-infinispan
+  repository: https://charts.openshift.io/
+  version: 0.2.2
+digest: sha256:ace626b5a77bc90f8faa206fb0f83a54de4b8988af37a5e54101193cded7be1a
+generated: "2022-09-16T15:59:49.282911859+02:00"
