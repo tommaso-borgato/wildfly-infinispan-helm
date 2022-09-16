@@ -20,9 +20,8 @@ wildfly:
       version: latest
       builderImage: quay.io/wildfly/wildfly-s2i-jdk17
       runtimeImage: quay.io/wildfly/wildfly-runtime-jdk17
-    deploy:
-      replicas: 1
-      env:
-        # Env vars to connect to PostgreSQL DB
-        - name: MAVEN_ARGS_APPEND
-          value: "-Dserver-feature-pack.location=org.wildfly:wildfly-galleon-pack:27.0.0.Alpha4 -Dcloud-feature-pack.location=org.wildfly.cloud:wildfly-cloud-galleon-pack:2.0.0.Alpha4"
+  deploy:
+    replicas: 1
+    env:
+      - name: MAVEN_ARGS_APPEND
+        value: "-Dserver-feature-pack.location=org.wildfly:wildfly-galleon-pack:27.0.0.Alpha4 -Dcloud-feature-pack.location=org.wildfly.cloud:wildfly-cloud-galleon-pack:2.0.0.Alpha4"
